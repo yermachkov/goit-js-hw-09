@@ -25,7 +25,7 @@ function onFormSubmit(event) {
   let totalDelay = Number(delay.value);
   
   for (let i = 0; i < amount.value; i += 1) {
-    createPromise(i, totalDelay)
+    createPromise(i+1, totalDelay)
       .then(value => Notiflix.Notify.success(value))
       .catch(error => Notiflix.Notify.failure(error))
     
